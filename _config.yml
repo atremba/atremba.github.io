@@ -18,15 +18,9 @@ sass:
 # About/contact
 author:
   name:              Andrey Tremba
-  url:               
   email:             
 
-# Custom vars
-version:             2.0.0
-github:              
-  repo:              https://github.com/poole/poole
-
 # Gems
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-gist
