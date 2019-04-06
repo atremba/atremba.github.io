@@ -4,6 +4,10 @@ _site
 .ruby-version
 .sass-cache
 
+# Local serve helper files
+/Gemfile
+/Gemfile.lock
+
 # Numerous always-ignore extensions
 *.diff
 *.err
