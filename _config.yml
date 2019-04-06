@@ -21,7 +21,7 @@ author:
   email:             
 
 # Tracking
-google-analytics:    UA-137804514-1
+google_analytics:    UA-137804514-1
 
 # Gems
 plugins:
