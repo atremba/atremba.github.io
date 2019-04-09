@@ -15,6 +15,19 @@ sass:
   sass_dir:          _sass
   style:            :compressed
 
+# Jekyll plugins (former gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-gist
+
+markdown:            CommonMark
+
+# and its options
+commonmark:
+  options:           ["SMART", "FOOTNOTES"]
+  extensions:        ["strikethrough", "autolink", "table"]
+
+# Custom variables
 # About/contact
 author:
   name:              Andrey Tremba
@@ -22,8 +35,3 @@ author:
 
 # Tracking
 google_analytics:    UA-137804514-1
-
-# Gems
-plugins:
-  - jekyll-paginate
-  - jekyll-gist
