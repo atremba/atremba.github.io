@@ -6,7 +6,7 @@ title:               По поводу и без
 tagline:             Do about and for no reason
 url:                 https://atremba.github.io
 paginate:            1
-baseurl:             ""
+baseurl:             https://atremba.github.io
 
 # Assets
 #
@@ -20,6 +20,7 @@ plugins:
   - jekyll-paginate
   - jekyll-gist
 
+# Choose a parser for markdown
 markdown:            CommonMark
 
 # and its options
@@ -28,6 +29,7 @@ commonmark:
   extensions:        ["strikethrough", "autolink", "table"]
 
 # Custom variables
+
 # About/contact
 author:
   name:              Andrey Tremba
