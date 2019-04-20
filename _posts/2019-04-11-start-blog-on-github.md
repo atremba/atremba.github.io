@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Простейший блог на Github Pages
-last_modified_at: 2019-04-16
+last_modified_at: 2019-04-21
 ---
 
 Обновлено {{ page.last_modified_at | date: "%F %Z" }}.
@@ -12,7 +12,7 @@ last_modified_at: 2019-04-16
 Необходимые требования:
 
 - иметь аккаунт на Github,
-- знать [`markdown`-разметку](https://markdown-it.github.io/) (в диалекте [kramdown](https://kramdown.gettalong.org/), [CommonMark](https://commonmark.org/)[^1] или [Redcarpet](https://github.com/vmg/redcarpet)),
+- знать [`markdown`-разметку](https://markdown-it.github.io/) (в диалекте [kramdown](https://kramdown.gettalong.org/), [CommonMark](https://commonmark.org/)[^1] или ~~[Redcarpet](https://github.com/vmg/redcarpet)~~),
 - уметь нажимать на кнопки в интерфейсе Github.
 
 В этом случае Github используется как продвинутый онлайн-редактор, никакого знания git не требуется. Отмечу, что знание `markdown` не является обязательным. На Github Pages можно загрузить "обычный", "статический" сайт из `html`-, `css`- и `js`-файлов (но никакого `php`). Однако писать тексты на `markdown` намного проще, чем на HTML и даже проще, чем редактировать страницы в Википедии, а об остальном позаботиться Jekyll[^2].
@@ -42,7 +42,7 @@ last_modified_at: 2019-04-16
 ## 2. Выбор оформления
 
 Надо найти на Github подходящую тему для движка Jekyll или готовый блог на Jekyll.
-Рекомендую начать с простых тем: [poole](https://github.com/poole/poole)[^4] или [пройтись по списку плагинов](https://github.com/topics/jekyll-theme).
+Рекомендую начать с простых тем: [poole](https://github.com/poole/poole)[^4], [Jekyll Now](https://github.com/barryclark/jekyll-now) или [пройтись по списку плагинов](https://github.com/topics/jekyll-theme).
 Обычно в файле `README.MD` указывают, какие необходимые действия нужны после копирования сайта.
 
 ## 3. Сделать копию
@@ -114,19 +114,31 @@ title: Начинаем блог
 9. Окончательный результат (обновление сайта на Github происходит с небольшой задержкой - с полминуты)
 ![Исправлено](/assets/2019-04-11-start-blog-on-github/github-updated-post-underline.png)
 
+К сожалению, часто обновлять сайт таким образом не получится, у Github Pages есть _мягкое_ [ограничении 10 "сборок" сайта в час](https://help.github.com/en/articles/what-is-github-pages#usage-limits). Для отладки удобно установить [локальную копию сайта (в плане)](/TODO).
+
 ---
 
 Далее блог можно развивать разными способами:
 
 - изучая [возможности `markdown` (в плане)](/TODO) для редактирования текстов,
 - погружаясь в [глубины Jekyll по настройке блога (в плане)](/TODO), для изменения внешнего вида или структуры,
-- устанавливая [локальную версию сайта (в плане)](/TODO), для отладки изменений и записей и борясь с git?
+- устанавливая [локальную версию сайта (в плане)](/TODO), для отладки изменений и записей и борясь с git.
 - изучая [внутренний "движок" Jekyll - Liquid (в плане)](/TODO)
 - или сразу перейдя к [списку ресурсов по Jekyll (в плане)](/TODO)
 
 ---
 
-[^1]: Точнее, Github-версия Commonmark (Github Flavoured Markdown), краткое руководство на русском или [здесь](https://github.com/OlgaVlasova/markdown-doc) или [здесь](https://paulradzkov.com/2014/markdown_cheatsheet/).
+## Ссылки
+
+- <http://alexprivalov.org/setup-blog-on-github/> - очень хороший пост, во многом вдохновивший на ведение блога именно на Jekyll с темой Poole. Включает установку локального Jekyll (если сходу не получится, см. мою [запись о локальной установке]({% post_url 2019-04-21-local-jekyll %})).
+
+- <https://guides.hexlet.io/jekyll/> - краткое, но содержательное руководство по настройке Jekyll с темой на Bootstrap.
+
+- <http://jmcglone.com/guides/github-pages/> - одно из рекомендуемых на сайте Jekyll руководств по установки и использованию Jekyll на Github, с влезанием в HTML неплохим набором ссылок (всё на английском).
+
+---
+
+[^1]: Точнее, Github-версия Commonmark (Github Flavoured Markdown), краткое руководство на русском или [здесь](https://github.com/OlgaVlasova/markdown-doc) или [здесь](https://paulradzkov.com/2014/markdown_cheatsheet/). Начиная с Jekyll 3.0 на Github Pages, с одной стороны,[поддерживается только kramdown](https://help.github.com/en/articles/updating-your-markdown-processor-to-kramdown), а с другой - плагин jekyll-commonmark-ghpages для CommonMark [входит в список версии Jekyll для Github](https://pages.github.com/versions/).
 
 [^2]: [Jekyll](https://jekyllrb.com) это то, что превращает текстовые файлы в разметке `markdown` в HTML-страницы, вставляет ссылки, изображения, т.е. *генератор статических сайтов*. По сравнению с классическими системами управления контентом (Content Management System, CMS, напр. Joomla! и jango), <!-- с Wiki системами (pmWiki, DokuWiki и пр.),--> он не требует ни баз данных, ни специфического языка программирования типа `php`, оставаясь при этом очень гибким. Самое полезное для нас то, что он встроен в что Github Pages, что и послужило решающим перевесом в выборе платформы.
 
