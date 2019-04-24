@@ -15,10 +15,19 @@ sass:
   sass_dir:          _sass
   style:            :compressed
 
+
+# Jekyll build options
+
+# Cause a build to fail if there is a YAML syntax error in a page's front matter.
+strict_front_matter: true
+
+
 # Jekyll plugins (former gems:)
 plugins:
   - jekyll-paginate
   - jekyll-gist
+
+
 
 # Choose a parser for markdown
 markdown:            CommonMark
@@ -27,6 +36,7 @@ markdown:            CommonMark
 commonmark:
   options:           ["SMART", "FOOTNOTES"]
   extensions:        ["strikethrough", "autolink", "table"]
+
 
 # Custom variables
 
