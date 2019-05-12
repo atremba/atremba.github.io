@@ -105,6 +105,8 @@ bundle exec jekyll build --strict_front_matter
 
 В последующем этот словарь имеет имя `site` и может использоваться в [шаблонах Liquid](/TODO#liquid) (например, `site.title` выдаст значение поля `title:` в `_config.yml`).
 
+При редактировании этого файла надо перезапускать Jekyll (`bundle exec ...`), чтобы изменения были применены.
+
 Github Pages [переопределяет значения по умолчанию ряда полей](https://help.github.com/en/articles/configuring-jekyll), а также фиксирует некоторые поля.
 
 Разнообразие пользовательских полей, как правило, используется для настройки темы или самого сайта. [Конфигурационный файл этого блога](https://github.com/atremba/atremba.github.io/blob/master/_config.yml) содержит некоторые полезные комментарии.
