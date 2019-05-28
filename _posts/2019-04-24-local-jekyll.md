@@ -112,7 +112,7 @@ bundle exec jekyll serve --baseurl "" --future
 
 - [Troubleshooting GitHub Pages builds](https://help.github.com/en/articles/troubleshooting-github-pages-builds) - подробная документация по ошибкам Jekyll на Github.
 
-- <https://jekyllrb.com/docs/installation/> - варианты установки Jekyll на локальные системы (MacOS, Linux, Windows).
+- <https://jekyllrb.com/docs/installation/> - варианты установки на локальные системы (MacOS, Linux, Windows) в документации Jekyll.
 
 - <https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll> - локальная установка Jekyll в документации Github Pages.
 
@@ -123,6 +123,10 @@ bundle exec jekyll serve --baseurl "" --future
 - <https://jekyllrb.com/docs/usage/> - варианты запуска Jekyll из командной строки.
 
 - <https://jekyllrb.com/docs/configuration/options/> - параметры Jekyll при запуске из командной строки (flags, отмечены синим).
+
+{% comment %}
+- <https://www.8host.com/blog/tag/jekyll/> - хостинг Jekyll и работа в Ubuntu
+{% endcomment %}
 
 ---
 

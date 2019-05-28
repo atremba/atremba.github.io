@@ -126,7 +126,7 @@ title: Начинаем блог
 - разобраться с Jekyll:
   - [сделать начальную настройку сайта]({% post_url 2019-04-28-jekyll-main-configuration %}),
   - погружаясь в [глубины Jekyll по настройке блога (в плане)](/TODO#jekyll-config), для изменения внешнего вида или структуры,
-  - изучая [внутренний "движок" Jekyll - Liquid (в плане)](/TODO#Liquid), и
+  - изучая [Liquid - внутренний "движок" Jekyll]({% post_url 2019-05-12-jekyll-and-liquid %}), и
   - меняя внешний вид [в HTML-коде (в плане)](/TODO#jekyll-html).
 
 ---
@@ -144,6 +144,12 @@ title: Начинаем блог
 - <https://lab.github.com/githubtraining/github-pages> - курс на Github Pages для знакомства с Jekyll.
 
 - <http://jmcglone.com/guides/github-pages/> - одно из рекомендуемых на сайте Jekyll руководств по установки и использованию Jekyll на Github, с влезанием в HTML неплохим набором ссылок (всё на английском).
+
+{% comment %}
+<https://www.frontender.info/build-blog-jekyll-github-pages/> - 
+перевод [длиинопоста по локальной установке блога на Jekyll](https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/).
+
+{% endcomment %}
 
 ---
 
