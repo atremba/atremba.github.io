@@ -15,5 +15,6 @@ title: Ссылочная
 5. [10-минутный Git Handbook](https://guides.github.com/introduction/git-handbook/) на Github Guides.
 6. Практика в командной строке.
 7. ["Магия" git](https://habr.com/ru/post/60347/) - использование git в командной строке - можно использовать как справочник по основным операцииям.
+8. [Oh shit, git!](http://ohshitgit.com/) - руководство, если что-то пошло не так (как правило, всегда происходит).
 
 <!-- ### Github -->

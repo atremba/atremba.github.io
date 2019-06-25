@@ -2,6 +2,7 @@
 title: Шрифты в matplotlib.pyplot
 ---
 
+
 **Задача:** в формулах на рисунках, сделанных в `matplotlib`, хочется иметь шрифты, максимально похожие на шрифты основного текста (в частности - шрифты с засечками).
 
 **Подзадача:** разобраться с настройкой шрифтов.
@@ -75,6 +76,7 @@ matplotlib.font_manager.get_cachedir()
 {% comment %}
 
 ### Текущий шрифт (по умолчанию)
+
 Есть некоторая путаница между семейством и конкретным шрифтом, см. [подробности](https://stackoverflow.com/questions/27817912/find-out-which-font-matplotlib-uses).
 
 И все эти списки - **рекомендации** для поиска наиболее подходящего шрифта.
@@ -94,7 +96,7 @@ matplotlib.font_manager.get_cachedir()
 
 Обычно тип шрифта, используемый в командах `matplotlib` [настраивается](https://matplotlib.org/gallery/api/font_family_rc_sgskip.html) установкой `rcParams['font.family']` и
 `rcParams['font.<font_family>'] = <список шрифтов>` (список нужен для того, чтобы сразу перечислить "запасные" шрифты).
-Это не сработает: 
+Это не сработает:
 
 ```python
 import matplotlib as mpl
@@ -137,6 +139,7 @@ mpl.rcParams['font.family'] = 'serif'
 mpl.rcParams['mathtext.fontset'] = 'cm'
 plt.text(0.05, 0.4, 'с) Serif fonts everywhere: Text with $For = m^{ul}(a) \\rightarrow \\max_a$', fontsize=14)
 ```
+
 ![mpl.rcParams['mathtext.fontset'] = 'cm' size mismatch](/assets/2019-05-28-matplotlib-fonts\c.png)
 
 ```python
@@ -147,8 +150,8 @@ mpl.rcParams['font.serif'] = 'DejaVu Serif'
 mpl.rcParams['mathtext.fontset'] = 'dejavuserif'
 plt.text(0.05, 0.4, 'd) Dejavu Serif for all: Text with $For = m^{ul}(a) \\rightarrow \max_a$', fontsize=14)
 ```
-![mpl.rcParams['mathtext.fontset'] = 'dejavuserif' matches 'DejaVu Serif' font](/assets/2019-05-28-matplotlib-fonts\d.png)
 
+![mpl.rcParams['mathtext.fontset'] = 'dejavuserif' matches 'DejaVu Serif' font](/assets/2019-05-28-matplotlib-fonts\d.png)
 
 ### Нюансы
 
@@ -156,11 +159,10 @@ plt.text(0.05, 0.4, 'd) Dejavu Serif for all: Text with $For = m^{ul}(a) \\right
 - набор доступных шрифтов для формул очень ограничен, и им может не найтись соответствия среди **установленных** шрифтов (у меня совпал только вариант `'dejavuserif'` для формул и `'DejaVu Serif'` для текста).
 - эту настройку можно сделать только с помощью `rcParams[...]` или `rc(...)`, и нельзя передать как аргумент (наподобие `fontdict`) в функцию отрисовки (`plot`, `text` ...).
 По этому поводу [в `matplotlib` открыт баг](https://github.com/matplotlib/matplotlib/issues/7107).
-Возможно, по этой причине возникают следующие особенности: 
+Возможно, по этой причине возникают следующие особенности:
   - нельзя настроить разные стили (шрифты) математического текста на одной картинке,
   - в jupyter notebook, к примеру, можно установить математический шрифт _после_ вывода (`text(...)`), но до отрисовки `plt.show()`. Примеры `e), f), g)`.
 - размеры шрифтов в обычном тексте и формулах могут различаться (пример `c)` выше).
-
 
 ```python
 import matplotlib as mpl
@@ -184,13 +186,13 @@ plt.text(0.05, 0.04, 'Now all formulae appears to be serif... ($x^2 = 42$)', fon
 
 plt.show()
 ```
+
 ![setting math font after printout but before show() works perfectly](/assets/2019-05-28-matplotlib-fonts\e-f-g.png)
 
 ## Выводы
 
 1. Подберите нужный шрифт для формул (один из 5), соответствующий одному из установленных шрифтов (напр. `cm` и `Computer Modern` или `dejavusans` и `Dejavu Sans` и т.п.)
 2. Используйте `mpl.rcParams['mathtext.fontset'] = ...` для настройки шрифта в формулах.
-
 
 ## Ссылки
 
@@ -199,3 +201,4 @@ plt.show()
 - <http://jonathansoma.com/lede/data-studio/matplotlib/changing-fonts-in-matplotlib/> - шрифты можно изменять в любом текстовом объекте независимо
 - <https://jenyay.net/Matplotlib/RcParams> - о параметрах `matplotlib` в цикле статей на русском языке
 {% comment %}- сслыка на matplotlib-fonts.ipynb {% endcomment %}
+- <https://pythonmatplotlibtips.blogspot.com/2018/01/try-using-all-mathtext-fontset-in-python-matplotlib.html> - примеры всех шрифтов математического режима `matplotlib`
