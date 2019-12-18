@@ -155,7 +155,7 @@ plt.text(0.05, 0.4, 'd) Dejavu Serif for all: Text with $For = m^{ul}(a) \\right
 
 ### Нюансы
 
-- должен быть отключён внешний Latex-интерпретатор: `rcParams['text.usetex'] = false`. Настройка `'mathtext.fontset'` влияет на _собственный_ интерпретатор `matplotlib`.
+- должен быть отключён внешний Latex-интерпретатор: `rcParams['text.usetex'] = false`. Настройка `'mathtext.fontset'` влияет на _собственный_ Latex-интерпретатор `matplotlib`.
 - набор доступных шрифтов для формул очень ограничен, и им может не найтись соответствия среди **установленных** шрифтов (у меня совпал только вариант `'dejavuserif'` для формул и `'DejaVu Serif'` для текста).
 - эту настройку можно сделать только с помощью `rcParams[...]` или `rc(...)`, и нельзя передать как аргумент (наподобие `fontdict`) в функцию отрисовки (`plot`, `text` ...).
 По этому поводу [в `matplotlib` открыт баг](https://github.com/matplotlib/matplotlib/issues/7107).

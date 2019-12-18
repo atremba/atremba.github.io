@@ -16,5 +16,12 @@ title: Ссылочная
 6. Практика в командной строке.
 7. ["Магия" git](https://habr.com/ru/post/60347/) - использование git в командной строке - можно использовать как справочник по основным операцииям.
 8. [Oh shit, git!](http://ohshitgit.com/) - руководство, если что-то пошло не так (как правило, всегда происходит).
+9. [Правила полёта на Git](https://github.com/k88hudson/git-flight-rules/blob/master/README_ru.md) - набор рецептов и часто встречающихся задач, с решениями.
+
+
+{% comment %}https://tproger.ru/translations/git-quick-start/
+[Ежедневная работа в git](https://habr.com/ru/post/174467/)
+[Некоторые проблемы с Git](https://redfin.engineering/two-commits-that-wrecked-the-user-experience-of-git-f0075b77eab1) - не-интуитивность команд и объяснение.
+{% endcomment %}
 
 <!-- ### Github -->
