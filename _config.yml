@@ -30,7 +30,8 @@ plugins:
 
 
 # Choose a parser for markdown
-markdown:            CommonMark
+# CommonMark is not supported anymore in Github
+markdown:            GFM
 
 # and its options
 commonmark:
